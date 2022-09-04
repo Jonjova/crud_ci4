@@ -7,7 +7,7 @@
     <title>Product List</title>
 </head>
 <body>
-    <a href="/product/add_new">Add New</a>
+    <a href="<?= base_url('/product/add_new')?>">Add New</a>
     <table>
         <thead>
             <tr>
@@ -24,8 +24,8 @@
                 <td><?= $row['product_name'];?></td>
                 <td><?= $row['product_price'];?></td>
                 <td>
-                    <a href="/product/edit/<?= $row['product_id'];?>">Edit</a>
-                    <a href="/product/delete/<?= $row['product_id'];?>">Delete</a>
+                    <a href="<?= base_url()?>/product/edit/<?= $row['product_id'];?>">Edit</a>
+                    <a href="<?= base_url()?>/product/delete/<?= $row['product_id'];?>">Delete</a>
                 </td>
             </tr>
         <?php endforeach;?>

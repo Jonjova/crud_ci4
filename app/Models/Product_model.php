@@ -32,7 +32,7 @@ class Product_model extends Model
         return $query;
     } 
 
-    // MAX ID PERSONA
+    // MAX ID PRODUCTO
 	public function maxProdutoModel()
 	{
         

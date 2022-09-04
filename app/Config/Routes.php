@@ -36,6 +36,9 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
+//API REST PRUEBAS 
+$routes->get('/max_producto', 'Product::maxProducto');
+
 $routes->get('/', 'Product::index');
 $routes->get('product/add_new', 'Product::add_new');
 $routes->get('product/edit/(:num)', 'Product::edit/$1');

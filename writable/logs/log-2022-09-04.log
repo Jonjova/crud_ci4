@@ -1,0 +1,152 @@
+CRITICAL - 2022-09-04 16:46:28 --> Undefined property: App\Controllers\Product::$respond
+in APPPATH\Controllers\Product.php on line 32.
+ 1 APPPATH\Controllers\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Product::$respond', 'APPPATH\\Controllers\\Product.php', 32)
+ 2 APPPATH\Controllers\Product.php(46): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 16:48:00 --> Undefined property: App\Controllers\Product::$respond
+in APPPATH\Controllers\Product.php on line 32.
+ 1 APPPATH\Controllers\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Product::$respond', 'APPPATH\\Controllers\\Product.php', 32)
+ 2 APPPATH\Controllers\Product.php(46): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 16:49:35 --> Object of class CodeIgniter\HTTP\Response could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...], false)
+ 6 APPPATH\Models\Product_model.php(19): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\Product.php(50): App\Models\Product_model->saveProduct([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 16:53:11 --> Object of class CodeIgniter\HTTP\Response could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...], false)
+ 6 APPPATH\Models\Product_model.php(19): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\Product.php(52): App\Models\Product_model->saveProduct([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 16:58:22 --> Object of class mysqli could not be converted to string
+in SYSTEMPATH\Format\XMLFormatter.php on line 69.
+ 1 SYSTEMPATH\Format\XMLFormatter.php(46): CodeIgniter\Format\XMLFormatter->arrayToXML([...], Object(SimpleXMLElement))
+ 2 SYSTEMPATH\HTTP\ResponseTrait.php(320): CodeIgniter\Format\XMLFormatter->format(Object(CodeIgniter\Database\MySQLi\Result))
+ 3 SYSTEMPATH\HTTP\ResponseTrait.php(278): CodeIgniter\HTTP\Response->formatBody(Object(CodeIgniter\Database\MySQLi\Result), 'xml')
+ 4 APPPATH\Controllers\Product.php(44): CodeIgniter\HTTP\Response->setXML(Object(CodeIgniter\Database\MySQLi\Result))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->maxProducto()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:04:25 --> Undefined variable $query
+in APPPATH\Controllers\Product.php on line 40.
+ 1 APPPATH\Controllers\Product.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\Product.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:05:51 --> Object of class CodeIgniter\HTTP\Response could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...], false)
+ 6 APPPATH\Models\Product_model.php(19): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\Product.php(51): App\Models\Product_model->saveProduct([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:07:22 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Product.php', 31)
+ 2 APPPATH\Controllers\Product.php(47): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:08:25 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Product.php', 31)
+ 2 APPPATH\Controllers\Product.php(47): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:08:36 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Product.php on line 31.
+ 1 APPPATH\Controllers\Product.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Product.php', 31)
+ 2 APPPATH\Controllers\Product.php(47): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:25:57 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Product.php on line 38.
+ 1 APPPATH\Controllers\Product.php(54): App\Controllers\Product->maxProducto()
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:26:22 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Product.php on line 38.
+ 1 APPPATH\Controllers\Product.php(54): App\Controllers\Product->maxProducto()
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:27:16 --> Cannot access offset of type string on string
+in APPPATH\Controllers\Product.php on line 38.
+ 1 APPPATH\Controllers\Product.php(54): App\Controllers\Product->maxProducto()
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:27:33 --> Undefined variable $id
+in APPPATH\Controllers\Product.php on line 36.
+ 1 APPPATH\Controllers\Product.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'APPPATH\\Controllers\\Product.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:28:37 --> Undefined array key 0
+in APPPATH\Controllers\Product.php on line 49.
+ 1 APPPATH\Controllers\Product.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Product.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:34:10 --> Object of class CodeIgniter\HTTP\Response could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `product` (`product_id`, `product_name`, `product_price`) VALUES (:product_id:, :product_name:, :product_price:)', [...], false)
+ 6 APPPATH\Models\Product_model.php(19): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\Product.php(58): App\Models\Product_model->saveProduct([...])
+ 8 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-04 17:36:28 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\Product.php on line 30.
+ 1 APPPATH\Controllers\Product.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\Product.php', 30)
+ 2 APPPATH\Controllers\Product.php(46): App\Controllers\Product->maxProducto()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->save()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

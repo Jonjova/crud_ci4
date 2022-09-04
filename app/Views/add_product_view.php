@@ -7,7 +7,7 @@
     <title>Add New Product</title>
 </head>
 <body>
-    <form action="/product/save" method="post">
+    <form action="<?= base_url('/product/save')?>" method="post">
         <input type="text" name="product_name">
         <input type="text" name="product_price">
         <button type="submit">Save</button>

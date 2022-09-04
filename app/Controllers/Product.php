@@ -2,14 +2,19 @@
 
 use CodeIgniter\Controller;
 use App\Models\Product_model;
+use CodeIgniter\RESTful\ResourceController;
 
-class Product extends Controller
+class Product extends ResourceController
 {
+    protected $modelName = 'App\Models\Product_model';
+    protected $format    = 'json';
+
     public function index()
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct();
         echo view('product_view',$data);
+        // return $this->respond($this->model->findAll());
     }
 
     public function add_new()
@@ -19,18 +24,21 @@ class Product extends Controller
     public function maxProducto()
 	{
         $model = new Product_model();
-		$id = $model->maxProdutoModel();
+         // $id = $model->maxProdutoModel();
+        $id =  $model->select('max(product_id + 1) as product_id')->findAll();
 		foreach ($id as $i)
 		{
 			if ($i['product_id'] == null)
 			{
-				return 1;
+                return 1;
 			}
 			else
 			{
-				return $i['product_id'];
+                return $i['product_id'];
 			}
 		}
+        // return $this->response->setJSON($result);
+        // return $this->response->setJSON($id['product_id']);
 	}
     public function save()
     {
@@ -44,7 +52,7 @@ class Product extends Controller
         return redirect()->to('/');
     }
 
-    public function edit($id)
+    public function edit($id=null)
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct($id)->getRow();
@@ -54,7 +62,7 @@ class Product extends Controller
         // echo '</pre>';
     }
 
-    public function update()
+    public function update($id=null)
     {
         $model = new Product_model();
         $id = $this->request->getPost('product_id');
@@ -66,7 +74,7 @@ class Product extends Controller
         return redirect()->to('/');
     }
 
-    public function delete($id)
+    public function delete($id=null)
     {
         $model = new Product_model();
         $model->deleteProduct($id);
