@@ -1,0 +1,684 @@
+ERROR - 2022-09-03 20:10:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:10:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:11:17 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:11:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:14:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:14:19 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:14:28 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:14:28 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:15:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:15:36 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:15:41 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:15:41 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:15:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:15:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:16:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:16:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:18:52 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:18:52 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:19:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:19:12 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:20:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:20:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:22:51 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:22:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:24:15 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:24:15 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-09-03 20:24:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#10 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp_v8\htdocs\appstarter\app\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp_v8\htdocs\appstarter\app\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+#7 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Product->index()
+#8 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+#9 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_v8\htdocs\appstarter\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_v8\htdocs\appstarter\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_v8\\htd...')
+#12 {main}
+CRITICAL - 2022-09-03 20:24:31 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `product`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Product_model.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Product.php(11): App\Models\Product_model->getProduct()
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-03 20:58:13 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Product.php on line 36.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Product.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Product')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Product')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Product', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-03 20:58:46 --> Array to string conversion
+in APPPATH\Controllers\Product.php on line 35.
+ 1 APPPATH\Controllers\Product.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Product.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->edit('45')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-03 20:59:14 --> Array to string conversion
+in APPPATH\Controllers\Product.php on line 35.
+ 1 APPPATH\Controllers\Product.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Product.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Product->edit('45')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
