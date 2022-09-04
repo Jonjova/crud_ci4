@@ -32,7 +32,7 @@ class Product extends Controller
 			}
 		}
 	}
-    public function save($last_id = null)
+    public function save()
     {
         $model = new Product_model();
         $data = array(
@@ -41,7 +41,7 @@ class Product extends Controller
             'product_price' => $this->request->getPost('product_price'),
         );
         $model->saveProduct($data);
-        return redirect()->to('/productos');
+        return redirect()->to('/');
     }
 
     public function edit($id)
@@ -63,13 +63,13 @@ class Product extends Controller
             'product_price' => $this->request->getPost('product_price'),
         );
         $model->updateProduct($data, $id);
-        return redirect()->to('/productos');
+        return redirect()->to('/');
     }
 
     public function delete($id)
     {
         $model = new Product_model();
         $model->deleteProduct($id);
-        return redirect()->to('/productos');
+        return redirect()->to('/');
     }
 }
