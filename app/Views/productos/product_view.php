@@ -14,13 +14,13 @@
     <table>
         <thead>
             <tr>
-                <!-- <th><input class="cha" id="selectAll" type="checkbox"><label for='selectAll'>Todos</label></th> -->
-                <th>Id</th>
+                <th><input class="cha" id="selectAll" type="checkbox"><label for='selectAll'>Todos</label></th>
+                <!-- <th>Id</th>
                 <th>Name</th>
-                <th>Price</th>
-                <!-- <th>Crear</th>
+                <th>Price</th> -->
+                <th>Crear</th>
                 <th>editar</th>
-                <th>Eliminar</th> -->
+                <th>Eliminar</th>
                 <th>Action</th>
             </tr>
         </thead>
