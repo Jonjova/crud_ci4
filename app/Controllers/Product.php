@@ -13,13 +13,20 @@ class Product extends ResourceController
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct();
-        echo view('product_view',$data);
+        echo view('productos/product_view',$data);
         // return $this->respond($this->model->findAll());
+    }
+    public function mostrar_tabla()
+    {
+        $model = new Product_model();
+        $data= $model->getProduct();
+        return json_encode($data);// Forma Tradicional como retornar un JSON
+        // return $this->respond($this->model->findAll()); Forma corta como retornar un JSON
     }
 
     public function add_new()
     {
-        echo view('add_product_view');
+        echo view('productos/add_product_view');
     }
     public function maxProducto()
 	{
@@ -56,7 +63,7 @@ class Product extends ResourceController
     {
         $model = new Product_model();
         $data['product'] = $model->getProduct($id)->getRow();
-        echo view('edit_product_view', $data);
+        echo view('productos/edit_product_view', $data);
         // echo '<pre>';
         // echo print_r($data);
         // echo '</pre>';

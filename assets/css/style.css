@@ -1,0 +1,204 @@
+:root {
+    --page-bg: #fff;
+    --text-color: #000;
+    --link-color: #00f;
+    --vlink-color: #909;
+    --flink-color: #00f;
+  }
+  
+  /* @media screen and (prefers-color-scheme: dark) {
+    :root {
+      --page-bg: #000;
+      --text-color: #fff;
+      --link-color: #99f;
+      --vlink-color: #c6c;
+      --flink-color: #99f;
+    }
+  } */
+body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--page-bg);
+    /*   line-height: 1.5; */
+    /*   letter-spacing: 0.12em; */
+    /*   word-spacing: 0.16em; */
+    margin: 0 2vw;
+  }
+  
+/* aqui comienza el diseño de la tabla  */
+table {
+    margin: 1em 0;
+    border-collapse: collapse;
+  }
+  
+  caption {
+    text-align: left;
+    font-style: italic;
+    padding: 0.25em 0.5em 0.5em 0.5em;
+  }
+  
+  th,
+  td {
+    padding: 0.25em 0.5em 0.25em 1em;
+    vertical-align: text-top;
+    text-align: left;
+    text-indent: -0.5em;
+    border: 0.01em solid #666;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  td:empty {
+    border: none;
+  }
+  
+  th,
+  thead tr:first-child th {
+    vertical-align: bottom;
+    background-color: #666;
+    color: #fff;
+  }
+  
+  thead th:nth-child(-n + 2) {
+    text-align: left;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tr td + th,
+  tr:nth-last-child(-n + 3) th {
+    background-color: transparent;
+    color: initial;
+    color: var(--text-color);
+  }
+  
+  tr *:nth-last-child(1),
+  tr *:nth-last-child(2),
+  tr *:nth-last-child(3),
+  tr:nth-last-child(-n + 3) * {
+    text-align: right;
+    white-space: nowrap;
+  }
+  
+  tr:nth-last-child(-n + 3) th,
+  .despan tr:nth-last-child(-n + 3) td:empty {
+    background-color: var(--page-bg);
+    border: none;
+  }
+  
+  .tfoot tbody tr:nth-last-child(-n + 3) th {
+    background-color: transparent;
+    text-align: unset;
+    border: 0.01em solid #666;
+  }
+  
+  .visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+  }
+  
+  .blank
+    tr:not(:nth-last-child(1)):not(:nth-last-child(2)):not(:nth-last-child(3))
+    *:first-child {
+    padding: 0;
+  }
+  
+
+/* aqui termina el diseño de la tabla */
+small {
+    display: block;
+    color: #585858;
+    font-size: 75%;
+    margin-top: 25px;
+  }
+small > a {
+    color: #585858;
+  }
+/* aqui comienza el diseño de los botones  */
+.css-boton {
+    display: inline-block;
+    background-color: #E6E6E6;
+    padding: .5em 1em;
+    color: #444;
+    font-family: inherit;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid #999;
+    border: transparent;
+    border-radius: 2px;
+    margin: 3px;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .css-boton-foco,
+  .css-boton:focus,
+  .css-boton:hover {
+    filter: alpha(opacity=90);
+    background-image: -webkit-linear-gradient(transparent, rgba(0,0,0,.05) 40%, rgba(0,0,0,.1));
+    background-image: linear-gradient(transparent, rgba(0,0,0,.05) 40%, rgba(0,0,0,.1));
+  }
+  
+  .css-boton-activo,
+  .css-boton:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset, 0 0 6px rgba(0,0,0,.2) inset;
+    border-color: #000;
+  }
+  
+  .css-boton-desactivado,
+  .css-boton-desactivado:active,
+  .css-boton-desactivado:focus,
+  .css-boton-desactivado:hover,
+  .css-boton[disabled] {
+    border: none;
+    background-image: none;
+    filter: alpha(opacity=40);
+    opacity: .4;
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  .boton-primario {
+    background-color: #0078e7;
+    color: #fff;
+  }
+  
+  .boton-info,
+  .boton-exito,
+  .boton-advertencia,
+  .boton-error {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .boton-info {
+    background: rgb(66, 184, 221); /* this is a light blue */
+  }
+  
+  .boton-exito {
+    background: rgb(28, 184, 65); /* this is a green */
+  }
+  
+  .boton-advertencia {
+    background: rgb(223, 117, 20); /* this is an orange */
+  }

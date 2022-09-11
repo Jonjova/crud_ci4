@@ -77,6 +77,26 @@ class Database extends Config
         'foreignKeys' => true,
     ];
 
+    public $sql = [
+        'DSN'      => '',
+        'hostname' => '192.168.1.9',
+        'username' => 'sa',
+        'password' => '123',
+        'database' => 'pos_db',
+        'DBDriver' => 'mssql',
+        'DBPrefix' => '',
+        'pConnect' => false,
+        'DBDebug'  => (ENVIRONMENT !== 'production'),
+        'charset'  => 'utf8',
+        'DBCollat' => 'utf8_general_ci',
+        'swapPre'  => '',
+        'encrypt'  => false,
+        'compress' => false,
+        'strictOn' => false,
+        'failover' => [],
+        'port'     => 1433,
+    ];
+
     public function __construct()
     {
         parent::__construct();

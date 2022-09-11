@@ -38,6 +38,7 @@ $routes->set404Override();
 // $routes->get('/', 'Home::index');
 //API REST PRUEBAS 
 $routes->get('/max_producto', 'Product::maxProducto');
+$routes->get('/mostrar', 'Product::mostrar_tabla');
 
 $routes->get('/', 'Product::index');
 $routes->get('product/add_new', 'Product::add_new');

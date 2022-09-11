@@ -1,0 +1,6 @@
+LINEAS A AGREGAR EN PHP.INI
+
+extension=php_pdo_sqlsrv_56_ts.dll
+extension=php_sqlsrv_56_ts.dll
+
+extension=sqlsrv.so
