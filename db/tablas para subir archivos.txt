@@ -1,0 +1,17 @@
+ CREATE TABLE `tbl_users` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(120) DEFAULT NULL,
+ `email` varchar(120) DEFAULT NULL,
+ `phone_no` varchar(120) DEFAULT NULL,
+ `profile_image` varchar(180) DEFAULT NULL,
+ `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ PRIMARY KEY (`id`)
+);    
+
+CREATE TABLE files (
+    id int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+    name varchar(100) NOT NULL COMMENT 'Name',
+    type varchar(255) NOT NULL COMMENT 'file type',
+    created_at varchar(20) NOT NULL COMMENT 'Created date',
+    PRIMARY KEY (id)
+);     
