@@ -48,6 +48,9 @@ $routes->post('product/save', 'Product::save');
 $routes->post('product/update', 'Product::update');
 $routes->get('product/delete/(:num)', 'Product::delete/$1');
 
+//$routes->get('/User', 'User::myForm');
+$routes->match(["get", "post"], "my-form", "User::myForm");
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
