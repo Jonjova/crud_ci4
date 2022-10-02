@@ -48,7 +48,10 @@ $routes->post('product/save', 'Product::save');
 $routes->post('product/update', 'Product::update');
 $routes->get('product/delete/(:num)', 'Product::delete/$1');
 
-//$routes->get('/User', 'User::myForm');
+//Ruta de formulario para subir 1
+$routes->get('/subir', 'Form::index');
+$routes->post('/form/store', 'Form::store');
+//Ruta de formulario para subir 2 
 $routes->match(["get", "post"], "my-form", "User::myForm");
 
 /*
